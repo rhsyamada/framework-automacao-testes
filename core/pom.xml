@@ -1,10 +1,32 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <groupId>br.com.desafio.netshoes</groupId>
-    <artifactId>framework-automacao-testes</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-  </parent>
-  <artifactId>core</artifactId>
-  <name>core</name>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>br.com.desafio.netshoes</groupId>
+		<artifactId>framework-automacao-testes</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>core</artifactId>
+	<name>core</name>
+
+	<properties>
+		<org.seleniumhq.selenium.version>3.0.1</org.seleniumhq.selenium.version>
+		<org.jboss.weld.se.version>3.0.0.Final</org.jboss.weld.se.version>
+		<javax.version>7.0</javax.version>
+		<io.appium.version>4.1.2</io.appium.version>
+		<maven.compiler.plugin.version>3.7.0</maven.compiler.plugin.version>
+	</properties>
+	
+	<dependencies>
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>${org.seleniumhq.selenium.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-server</artifactId>
+			<version>${org.seleniumhq.selenium.version}</version>
+		</dependency>
+	</dependencies>
 </project>
