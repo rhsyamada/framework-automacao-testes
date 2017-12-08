@@ -1,0 +1,33 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>br.com.desafio.netshoes</groupId>
+	<artifactId>framework-automacao-testes</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<name>framework-automacao-testes</name>
+	<description>Projeto do Framework de Automação de Testes</description>
+	<modules>
+		<module>gerador-evidencia</module>
+		<module>commons</module>
+		<module>core</module>
+	</modules>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<java.compiler.version>1.8</java.compiler.version>
+	</properties>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>${java.compiler.version}</source>
+					<target>${java.compiler.version}</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>

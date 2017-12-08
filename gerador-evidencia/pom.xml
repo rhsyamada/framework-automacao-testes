@@ -1,0 +1,57 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>br.com.desafio.netshoes</groupId>
+    <artifactId>framework-automacao-testes</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <artifactId>gerador-evidencia</artifactId>
+  <name>gerador-evidencia</name>
+  <description>Projeto para gera Evidencia da Automação de Testes</description>
+  
+  <properties>
+		<javax.version>7.0</javax.version>
+		<org.apache.commons.version>3.6</org.apache.commons.version>
+		<org.hibernate.version>5.2.4.Final</org.hibernate.version>
+		<itext.version>5.2.1</itext.version>
+		<org.seleniumhq.selenium.version>3.0.1</org.seleniumhq.selenium.version>
+		<io.appium.version>4.1.2</io.appium.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>javax</groupId>
+			<artifactId>javaee-api</artifactId>
+			<version>${javax.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>${org.apache.commons.version}</version>
+		</dependency>
+		<!-- Dependencias do hibernate-validator -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-validator</artifactId>
+			<version>${org.hibernate.version}</version>
+		</dependency>
+		<!-- Dependencias do itextpdf -->
+		<dependency>
+			<groupId>com.itextpdf</groupId>
+			<artifactId>itextpdf</artifactId>
+			<version>${itext.version}</version>
+		</dependency>
+		<!-- Dependencias do selenium -->
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>${org.seleniumhq.selenium.version}</version>
+		</dependency>
+		<!-- Dependencias do appium -->
+		<dependency>
+			<groupId>io.appium</groupId>
+			<artifactId>java-client</artifactId>
+			<version>${io.appium.version}</version>
+		</dependency>
+	</dependencies>
+</project>
