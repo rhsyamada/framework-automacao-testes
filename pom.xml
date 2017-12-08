@@ -9,7 +9,6 @@
 	<description>Projeto do Framework de Automação de Testes</description>
 	<modules>
 		<module>gerador-evidencia</module>
-		<module>commons</module>
 		<module>core</module>
 	</modules>
 
