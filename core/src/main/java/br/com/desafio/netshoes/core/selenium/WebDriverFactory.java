@@ -40,4 +40,12 @@ public class WebDriverFactory {
 		}
 		return TypeWebDriver.valueOf(appWebDriver).getWebDriver();
 	}
+
+	public WebDriver createWebDriver(TypeWebDriver type, DesiredCapabilities capabilities) {
+		return type.getWebDriver(capabilities);
+	}
+
+	public WebDriver createWebDriver(TypeWebDriver type) {
+		return type.getWebDriver();
+	}
 }
