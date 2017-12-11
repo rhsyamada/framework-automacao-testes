@@ -27,12 +27,12 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import br.com.desafio.netshoes.core.selenium.command.WebCommand;
 
-public class WebElementRede extends RemoteWebElement implements WebElement, FindsByLinkText, FindsById, FindsByName, FindsByTagName,
+public class WebElementNetshoes extends RemoteWebElement implements WebElement, FindsByLinkText, FindsById, FindsByName, FindsByTagName,
 		FindsByClassName, FindsByCssSelector, FindsByXPath, WrapsDriver, Locatable, HasIdentity, TakesScreenshot {
 	private RemoteWebElement element;
 	private WebCommand webCommand;
 
-	public WebElementRede(WebDriver driver, WebElement element) {
+	public WebElementNetshoes(WebDriver driver, WebElement element) {
 		this.element = (RemoteWebElement) element;
 		webCommand = new WebCommand(driver);
 		webCommand.waitProcessPage();

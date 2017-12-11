@@ -12,7 +12,7 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.ie.InternetExplorerDriverService;
 
 import br.com.desafio.netshoes.core.selenium.command.WebCommand;
-import br.com.desafio.netshoes.core.selenium.elements.WebElementRede;
+import br.com.desafio.netshoes.core.selenium.elements.WebElementNetshoes;
 import br.com.desafio.netshoes.core.selenium.properties.PropertiesLoader;
 
 public class WebDriverInternetExplorer extends InternetExplorerDriver implements WebDriver {
@@ -50,14 +50,14 @@ public class WebDriverInternetExplorer extends InternetExplorerDriver implements
 	public List<WebElement> findElements(By by) {
 		new WebCommand(this).waitProcessPage();
 		List<WebElement> ret = new ArrayList<>();
-		super.findElements(by).forEach(p -> ret.add(new WebElementRede(this, p)));
+		super.findElements(by).forEach(p -> ret.add(new WebElementNetshoes(this, p)));
 		return ret;
 	}
 
 	@Override
 	public WebElement findElement(By by) {
 		new WebCommand(this).waitProcessPage();
-		return new WebElementRede(this, super.findElement(by));
+		return new WebElementNetshoes(this, super.findElement(by));
 	}
 
 	public void resizeWebDriver() {
