@@ -7,7 +7,6 @@ import java.util.Map;
 
 import org.yaml.snakeyaml.Yaml;
 
-
 public class YamlFileLoader {
 
 	public static Object getAttribute(String path, String... param) throws Exception {
@@ -19,8 +18,7 @@ public class YamlFileLoader {
 		Map<?, ?> mapAux = (Map<?, ?>) yaml.load(input);
 
 		if (mapAux == null) {
-			throw new Exception(
-					String.format("A massa de dados não foi localizada no arquivo %s", file.getName()));
+			throw new Exception(String.format("A massa de dados não foi localizada no arquivo %s", file.getName()));
 		}
 
 		int cont;
