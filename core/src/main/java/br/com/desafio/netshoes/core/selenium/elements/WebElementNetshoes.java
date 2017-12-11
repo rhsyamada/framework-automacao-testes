@@ -27,8 +27,9 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import br.com.desafio.netshoes.core.selenium.command.WebCommand;
 
-public class WebElementNetshoes extends RemoteWebElement implements WebElement, FindsByLinkText, FindsById, FindsByName, FindsByTagName,
-		FindsByClassName, FindsByCssSelector, FindsByXPath, WrapsDriver, Locatable, HasIdentity, TakesScreenshot {
+public class WebElementNetshoes extends RemoteWebElement
+		implements WebElement, FindsByLinkText, FindsById, FindsByName, FindsByTagName, FindsByClassName,
+		FindsByCssSelector, FindsByXPath, WrapsDriver, Locatable, HasIdentity, TakesScreenshot {
 	private RemoteWebElement element;
 	private WebCommand webCommand;
 
@@ -40,6 +41,7 @@ public class WebElementNetshoes extends RemoteWebElement implements WebElement, 
 
 	@Override
 	public <X> X getScreenshotAs(OutputType<X> target) throws WebDriverException {
+		webCommand.waitProcessPage();
 		return element.getScreenshotAs(target);
 	}
 
@@ -77,156 +79,187 @@ public class WebElementNetshoes extends RemoteWebElement implements WebElement, 
 
 	@Override
 	public String getTagName() {
+		webCommand.waitProcessPage();
 		return element.getTagName();
 	}
 
 	@Override
 	public String getAttribute(String name) {
+		webCommand.waitProcessPage();
 		return element.getAttribute(name);
 	}
 
 	@Override
 	public boolean isSelected() {
+		webCommand.waitProcessPage();
 		return element.isSelected();
 	}
 
 	@Override
 	public boolean isEnabled() {
+		webCommand.waitProcessPage();
 		return element.isEnabled();
 	}
 
 	@Override
 	public String getText() {
+		webCommand.waitProcessPage();
 		return element.getText();
 	}
 
 	@Override
 	public List<WebElement> findElements(By by) {
+		webCommand.waitProcessPage();
 		return element.findElements(by);
 	}
 
 	@Override
 	public WebElement findElement(By by) {
+		webCommand.waitProcessPage();
 		return element.findElement(by);
 	}
 
 	@Override
 	public boolean isDisplayed() {
+		webCommand.waitProcessPage();
 		return element.isDisplayed();
 	}
 
 	@Override
 	public Point getLocation() {
+		webCommand.waitProcessPage();
 		return element.getLocation();
 	}
 
 	@Override
 	public Dimension getSize() {
+		webCommand.waitProcessPage();
 		return element.getSize();
 	}
 
 	@Override
 	public Rectangle getRect() {
+		webCommand.waitProcessPage();
 		return element.getRect();
 	}
 
 	@Override
 	public String getCssValue(String propertyName) {
+		webCommand.waitProcessPage();
 		return element.getCssValue(propertyName);
 	}
 
 	@Override
 	public String getId() {
+		webCommand.waitProcessPage();
 		return element.getId();
 	}
 
 	@Override
 	public Coordinates getCoordinates() {
+		webCommand.waitProcessPage();
 		return element.getCoordinates();
 	}
 
 	@Override
 	public WebDriver getWrappedDriver() {
+		webCommand.waitProcessPage();
 		return element.getWrappedDriver();
 	}
 
 	@Override
 	public WebElement findElementByXPath(String using) {
+		webCommand.waitProcessPage();
 		return element.findElementByXPath(using);
 	}
 
 	@Override
 	public List<WebElement> findElementsByXPath(String using) {
+		webCommand.waitProcessPage();
 		return element.findElementsByXPath(using);
 	}
 
 	@Override
 	public WebElement findElementByCssSelector(String using) {
+		webCommand.waitProcessPage();
 		return element.findElementByCssSelector(using);
 	}
 
 	@Override
 	public List<WebElement> findElementsByCssSelector(String using) {
+		webCommand.waitProcessPage();
 		return element.findElementsByCssSelector(using);
 	}
 
 	@Override
 	public WebElement findElementByClassName(String using) {
+		webCommand.waitProcessPage();
 		return element.findElementByClassName(using);
 	}
 
 	@Override
 	public List<WebElement> findElementsByClassName(String using) {
+		webCommand.waitProcessPage();
 		return element.findElementsByClassName(using);
 	}
 
 	@Override
 	public WebElement findElementByTagName(String using) {
+		webCommand.waitProcessPage();
 		return element.findElementByTagName(using);
 	}
 
 	@Override
 	public List<WebElement> findElementsByTagName(String using) {
+		webCommand.waitProcessPage();
 		return element.findElementsByTagName(using);
 	}
 
 	@Override
 	public WebElement findElementByName(String using) {
+		webCommand.waitProcessPage();
 		return element.findElementByName(using);
 	}
 
 	@Override
 	public List<WebElement> findElementsByName(String using) {
+		webCommand.waitProcessPage();
 		return element.findElementsByName(using);
 	}
 
 	@Override
 	public WebElement findElementById(String using) {
+		webCommand.waitProcessPage();
 		return element.findElementById(using);
 	}
 
 	@Override
 	public List<WebElement> findElementsById(String using) {
+		webCommand.waitProcessPage();
 		return element.findElementsById(using);
 	}
 
 	@Override
 	public WebElement findElementByLinkText(String using) {
+		webCommand.waitProcessPage();
 		return element.findElementByLinkText(using);
 	}
 
 	@Override
 	public List<WebElement> findElementsByLinkText(String using) {
+		webCommand.waitProcessPage();
 		return element.findElementsByLinkText(using);
 	}
 
 	@Override
 	public WebElement findElementByPartialLinkText(String using) {
+		webCommand.waitProcessPage();
 		return element.findElementByPartialLinkText(using);
 	}
 
 	@Override
 	public List<WebElement> findElementsByPartialLinkText(String using) {
+		webCommand.waitProcessPage();
 		return element.findElementsByPartialLinkText(using);
 	}
 }
