@@ -13,8 +13,8 @@ import br.com.desafio.netshoes.geradorevidencia.evidence.pdf.pages.Content;
 import br.com.desafio.netshoes.geradorevidencia.evidence.pdf.pages.Cover;
 import br.com.desafio.netshoes.geradorevidencia.evidence.pdf.pages.Header;
 import br.com.desafio.netshoes.geradorevidencia.evidence.pdf.pages.exceptions.PageException;
-import br.com.desafio.netshoes.geradorevidencia.structures.ICabecalho;
-import br.com.desafio.netshoes.geradorevidencia.structures.IConteudo;
+import br.com.desafio.netshoes.geradorevidencia.structures.Cabecalho;
+import br.com.desafio.netshoes.geradorevidencia.structures.Evidencia;
 
 public class EvidencePdf {
 	private Document document = new Document();
@@ -40,11 +40,11 @@ public class EvidencePdf {
 		document.open();
 	}
 
-	public void createCover(ICabecalho cabecalho) throws PageException {
+	public void createCover(Cabecalho cabecalho) throws PageException {
 		cover.createCover(cabecalho);
 	}
 
-	public void createContent(IConteudo conteudo) throws PageException {
+	public void createContent(Evidencia conteudo) throws PageException {
 		content.createContent(conteudo);
 	}
 

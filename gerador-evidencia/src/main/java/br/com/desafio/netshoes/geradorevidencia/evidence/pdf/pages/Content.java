@@ -4,14 +4,14 @@ import com.itextpdf.text.Document;
 import com.itextpdf.text.DocumentException;
 
 import br.com.desafio.netshoes.geradorevidencia.evidence.pdf.pages.exceptions.PageException;
-import br.com.desafio.netshoes.geradorevidencia.structures.IConteudo;
+import br.com.desafio.netshoes.geradorevidencia.structures.Evidencia;
 
 public class Content extends PageBase {
 	public Content(Document document) throws DocumentException {
 		super(document, 1);
 	}
 
-	public void createContent(IConteudo conteudo) throws PageException {
+	public void createContent(Evidencia conteudo) throws PageException {
 		try {
 			addNewPage();
 			addStatementToEvidencePdf(conteudo.getStatements());

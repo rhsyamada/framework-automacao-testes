@@ -7,19 +7,17 @@ import com.itextpdf.text.DocumentException;
 import br.com.desafio.netshoes.geradorevidencia.evidence.pdf.EvidencePdf;
 import br.com.desafio.netshoes.geradorevidencia.evidence.pdf.pages.exceptions.PageException;
 import br.com.desafio.netshoes.geradorevidencia.structures.Cabecalho;
-import br.com.desafio.netshoes.geradorevidencia.structures.Conteudo;
-import br.com.desafio.netshoes.geradorevidencia.structures.ICabecalho;
-import br.com.desafio.netshoes.geradorevidencia.structures.IConteudo;
+import br.com.desafio.netshoes.geradorevidencia.structures.Evidencia;
 
 public class GeradorEvidencia {
-	private IConteudo content = new Conteudo();
-	private ICabecalho cover = new Cabecalho();
+	private Evidencia content = new Evidencia();
+	private Cabecalho cover = new Cabecalho();
 
-	public void setContent(IConteudo content) {
+	public void setContent(Evidencia content) {
 		this.content = content;
 	}
 
-	public void setCover(ICabecalho cover) {
+	public void setCover(Cabecalho cover) {
 		this.cover = cover;
 	}
 

@@ -21,7 +21,7 @@ import br.com.desafio.netshoes.geradorevidencia.evidence.pdf.statements.impls.Co
 import br.com.desafio.netshoes.geradorevidencia.structures.enums.StatusPasso;
 import br.com.desafio.netshoes.geradorevidencia.structures.exceptions.StructureException;
 
-public class Cabecalho implements ICabecalho {
+public class Cabecalho {
 	@NotNull
 	@Pattern(regexp = "(.)+", message = "não informado.")
 	private String idCt;
