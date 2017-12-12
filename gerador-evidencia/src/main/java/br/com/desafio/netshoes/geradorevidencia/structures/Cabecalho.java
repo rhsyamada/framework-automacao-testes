@@ -30,19 +30,7 @@ public class Cabecalho {
 	private String nomeCt;
 	@NotNull
 	@Pattern(regexp = "(.)+", message = "não informado.")
-	private String objetivo;
-	@NotNull
-	@Pattern(regexp = "(.)+", message = "não informado.")
-	private String cicloTeste;
-	@NotNull
-	@Pattern(regexp = "(.)+", message = "não informado.")
 	private String nomeProjeto;
-	@NotNull
-	@Pattern(regexp = "(.)+", message = "não informado.")
-	private String resultadoEsperado;
-	@NotNull
-	@Pattern(regexp = "(.)+", message = "não informado.")
-	private String resultadoObtido;
 	@NotNull
 	@Pattern(regexp = "(.)+", message = "não informado.")
 	private String ambiente;
@@ -63,24 +51,8 @@ public class Cabecalho {
 		this.nomeCt = nomeCt;
 	}
 
-	public void setObjetivo(String objetivo) {
-		this.objetivo = objetivo;
-	}
-
-	public void setCicloTeste(String cicloTeste) {
-		this.cicloTeste = cicloTeste;
-	}
-
 	public void setNomeProjeto(String nomeProjeto) {
 		this.nomeProjeto = nomeProjeto;
-	}
-
-	public void setResultadoEsperado(String resultadoEsperado) {
-		this.resultadoEsperado = resultadoEsperado;
-	}
-
-	public void setResultadoObtido(String resultadoObtido) {
-		this.resultadoObtido = resultadoObtido;
 	}
 
 	public void setAmbiente(String ambiente) {
@@ -138,25 +110,16 @@ public class Cabecalho {
 			statements.add(new CoverKey("ID + Nome CT"));
 			statements.add(new CoverValue(idCt + " - " + nomeCt, 3));
 			// Linha 4
-			statements.add(new CoverKey("Objetivo"));
-			statements.add(new CoverValue(objetivo, 3));
-			// Linha 5
-			statements.add(new CoverKey("Resultado Esperado"));
-			statements.add(new CoverValue(resultadoEsperado, 3));
-			// Linha 6
-			statements.add(new CoverKey("Resultado Obtido"));
-			statements.add(new CoverValue(resultadoObtido, 3));
-			// Linha 7
 			statements.add(new CoverKey("Status"));
 			statements.add(new CoverValue(status.name(), 3,
 					(status.equals(StatusPasso.Passed) ? BaseColor.GREEN : BaseColor.RED)));
-			// Linha 8
+			// Linha 5
 			statements.add(new CoverKey("Nome Servidor"));
 			statements.add(new CoverValue(InetAddress.getLocalHost().getHostName(), 3));
-			// Linha 9
+			// Linha 6
 			statements.add(new CoverKey("Usuario Logado"));
 			statements.add(new CoverValue(System.getProperty("user.name"), 3));
-			// Linha 10
+			// Linha 7
 			statements.add(new CoverKey("Sistema Operacional"));
 			statements.add(new CoverValue(System.getProperty("os.name")));
 			statements.add(new CoverKey("Endereço IP"));

@@ -21,6 +21,11 @@ public class ItemPasso extends Statement {
 		setAttributes(descricao, fonte);
 	}
 
+	public ItemPasso(byte[] imagem) throws ImageExceptions {
+		super(ItemPasso.class);
+		setAttributes(null, null, imagem);
+	}
+	
 	public ItemPasso(String descricao, Font fonte, byte[] imagem) throws ImageExceptions {
 		super(ItemPasso.class);
 		setAttributes(descricao, fonte, imagem);

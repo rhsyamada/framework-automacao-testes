@@ -6,6 +6,8 @@ import org.openqa.selenium.WebDriver;
 
 import com.itextpdf.text.Font;
 
+import br.com.desafio.netshoes.core.selenium.screenshot.Screenshot;
+import br.com.desafio.netshoes.geradorevidencia.evidence.pdf.images.exceptions.ImageExceptions;
 import br.com.desafio.netshoes.geradorevidencia.evidence.pdf.statements.Statement;
 import br.com.desafio.netshoes.geradorevidencia.evidence.pdf.statements.impls.ConjuntoPassos;
 import br.com.desafio.netshoes.geradorevidencia.evidence.pdf.statements.impls.ItemPasso;
@@ -39,18 +41,16 @@ public class Evidencia {
 		statements.add(new ItemPasso(descricao, fonte));
 	}
 
-	public void tirarPrint(WebDriver driver) {
-		// TODO colocar o metodo para tirar o print
+	public void tirarPrint(WebDriver driver) throws ImageExceptions {
+		statements.add(new ItemPasso(Screenshot.take(driver)));
 	}
 
-	public void tirarPrint(WebDriver driver, String descricao) throws Exception {
-		statements.add(new ItemPasso(descricao));
-		// TODO colocar o metodo para tirar o print
+	public void tirarPrint(WebDriver driver, String descricao) throws ImageExceptions {
+		statements.add(new ItemPasso(descricao, Screenshot.take(driver)));
 	}
 
 	public void tirarPrint(WebDriver driver, String descricao, Font fonte) throws Exception {
-		statements.add(new ItemPasso(descricao, fonte));
-		// TODO colocar o metodo para tirar o print
+		statements.add(new ItemPasso(descricao, fonte, Screenshot.take(driver)));
 	}
 
 	public LinkedList<Statement> getStatements() {

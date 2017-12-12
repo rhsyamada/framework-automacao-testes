@@ -11,18 +11,12 @@
 	<description>Projeto para gera Evidencia da Automação de Testes</description>
 
 	<properties>
-		<org.apache.commons.version>3.6</org.apache.commons.version>
 		<org.hibernate.version>5.2.4.Final</org.hibernate.version>
 		<itext.version>5.2.1</itext.version>
 		<br.com.desafio.netshoes.core>0.0.1-SNAPSHOT</br.com.desafio.netshoes.core>
 	</properties>
 
 	<dependencies>
-		<dependency>
-			<groupId>org.apache.commons</groupId>
-			<artifactId>commons-lang3</artifactId>
-			<version>${org.apache.commons.version}</version>
-		</dependency>
 		<!-- Dependencias do hibernate-validator -->
 		<dependency>
 			<groupId>org.hibernate</groupId>
